@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="th"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Haekpak Shabu - แหกปากชาบู</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "tertiary-fixed": "#a3f877",
+                "on-error-container": "#ffdad6",
+                "surface-bright": "#3f3737",
+                "tertiary-container": "#1a4c00",
+                "surface-container-lowest": "#120d0d",
+                "on-error": "#690005",
+                "surface-container-low": "#201a1a",
+                "surface": "#181212",
+                "on-tertiary-fixed-variant": "#1c5200",
+                "on-tertiary-fixed": "#072100",
+                "secondary-fixed-dim": "#ffb68d",
+                "surface-container-high": "#2f2828",
+                "on-primary-fixed": "#410003",
+                "inverse-primary": "#a73834",
+                "on-background": "#ede0df",
+                "inverse-surface": "#ede0df",
+                "error": "#ffb4ab",
+                "surface-container": "#251e1e",
+                "surface-container-highest": "#3a3333",
+                "tertiary-fixed-dim": "#88db5e",
+                "on-surface": "#ede0df",
+                "on-primary-fixed-variant": "#86201f",
+                "background": "#181212",
+                "surface-tint": "#ffb3ad",
+                "secondary": "#ffb68d",
+                "surface-dim": "#181212",
+                "on-secondary-fixed-variant": "#763300",
+                "error-container": "#93000a",
+                "on-primary-container": "#ff8f86",
+                "outline": "#a68a88",
+                "outline-variant": "#57413f",
+                "primary-fixed": "#ffdad6",
+                "primary-container": "#801b1b",
+                "on-secondary": "#532200",
+                "secondary-fixed": "#ffdbc9",
+                "surface-variant": "#3a3333",
+                "on-tertiary-container": "#70c248",
+                "on-secondary-container": "#491d00",
+                "primary-fixed-dim": "#ffb3ad",
+                "secondary-container": "#e66f13",
+                "on-primary": "#66050b",
+                "on-secondary-fixed": "#321200",
+                "tertiary": "#88db5e",
+                "on-tertiary": "#113800",
+                "on-surface-variant": "#debfbc",
+                "primary": "#ffb3ad",
+                "inverse-on-surface": "#362f2f"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "gutter": "20px",
+                "md": "24px",
+                "lg": "48px",
+                "margin-mobile": "16px",
+                "margin-desktop": "64px",
+                "base": "8px",
+                "sm": "12px",
+                "xs": "4px",
+                "xl": "80px"
+        },
+        "fontFamily": {
+                "display-lg": [
+                        "Be Vietnam Pro"
+                ],
+                "title-md": [
+                        "Be Vietnam Pro"
+                ],
+                "body-lg": [
+                        "Be Vietnam Pro"
+                ],
+                "body-md": [
+                        "Be Vietnam Pro"
+                ],
+                "label-bold": [
+                        "Be Vietnam Pro"
+                ],
+                "headline-lg-mobile": [
+                        "Be Vietnam Pro"
+                ],
+                "headline-lg": [
+                        "Be Vietnam Pro"
+                ]
+        },
+        "fontSize": {
+                "display-lg": [
+                        "48px",
+                        {
+                                "lineHeight": "56px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "800"
+                        }
+                ],
+                "title-md": [
+                        "20px",
+                        {
+                                "lineHeight": "28px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "28px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "label-bold": [
+                        "14px",
+                        {
+                                "lineHeight": "20px",
+                                "fontWeight": "700"
+                        }
+                ],
+                "headline-lg-mobile": [
+                        "28px",
+                        {
+                                "lineHeight": "36px",
+                                "fontWeight": "700"
+                        }
+                ],
+                "headline-lg": [
+                        "32px",
+                        {
+                                "lineHeight": "40px",
+                                "fontWeight": "700"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+        :root {
+            color-scheme: dark;
+            --bg: #181212;
+            --bg-deep: #120d0d;
+            --surface-soft: #201a1a;
+            --surface: #251e1e;
+            --surface-high: #3a3333;
+            --ink: #fff4f1;
+            --muted: #e5c8c3;
+            --primary: #ffb3ad;
+            --primary-deep: #801b1b;
+            --orange: #ffb68d;
+            --green: #88db5e;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Be Vietnam Pro", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background:
+                linear-gradient(180deg, rgba(24, 18, 18, 0) 0%, var(--bg) 48%, var(--bg-deep) 100%),
+                var(--bg);
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            pointer-events: none;
+            background:
+                linear-gradient(115deg, rgba(128, 27, 27, 0.26), transparent 34%),
+                linear-gradient(245deg, rgba(255, 182, 141, 0.12), transparent 42%);
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+            line-height: 1;
+        }
+
+        .site-header {
+            background: rgba(24, 18, 18, 0.94);
+            border-bottom: 1px solid rgba(255, 179, 173, 0.14);
+        }
+
+        .site-header nav a {
+            position: relative;
+        }
+
+        .site-header nav a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -8px;
+            height: 2px;
+            border-radius: 999px;
+            background: var(--orange);
+            transform: scaleX(0);
+            transform-origin: center;
+            transition: transform 180ms ease-out;
+        }
+
+        .site-header nav a:hover::after,
+        .site-header nav a:focus-visible::after {
+            transform: scaleX(1);
+        }
+
+        .brand-logo {
+            object-fit: contain;
+            padding: 0.12rem;
+            background: rgba(255, 231, 220, 0.14);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            filter: saturate(1.18) contrast(1.1) drop-shadow(0 6px 14px rgba(0, 0, 0, 0.22));
+        }
+
+        .text-glow-orange {
+            text-shadow: 0 14px 40px rgba(255, 104, 41, 0.28);
+        }
+
+        .btn-primary,
+        .btn-secondary,
+        .btn-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            min-height: 48px;
+            border-radius: 9999px;
+            font-weight: 800;
+            text-decoration: none;
+            transition: transform 180ms ease-out, filter 180ms ease-out, background 180ms ease-out, border-color 180ms ease-out;
+            white-space: nowrap;
+        }
+
+        .btn-primary {
+            color: #381000;
+            background: linear-gradient(135deg, #ffc5a0 0%, #ff8f4c 54%, #f46f20 100%);
+            padding: 0.875rem 1.35rem;
+            box-shadow: 0 10px 24px rgba(244, 121, 32, 0.3);
+        }
+
+        .btn-secondary {
+            color: var(--primary);
+            background: rgba(128, 27, 27, 0.58);
+            border: 1px solid rgba(255, 182, 141, 0.62);
+            padding: 0.875rem 1.35rem;
+        }
+
+        .btn-icon {
+            width: 48px;
+            color: var(--orange);
+            background: rgba(255, 182, 141, 0.11);
+            border: 1px solid rgba(255, 182, 141, 0.28);
+        }
+
+        .btn-primary:hover,
+        .btn-secondary:hover,
+        .btn-icon:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.05);
+        }
+
+        .btn-primary:active,
+        .btn-secondary:active,
+        .btn-icon:active {
+            transform: translateY(0) scale(0.98);
+        }
+
+        a:focus-visible,
+        button:focus-visible {
+            outline: 3px solid rgba(136, 219, 94, 0.88);
+            outline-offset: 4px;
+        }
+
+        .hero-section {
+            min-height: min(780px, calc(100vh - 4rem));
+            align-items: flex-end;
+            padding-top: clamp(6rem, 12vw, 9rem);
+            padding-bottom: clamp(4.75rem, 9vw, 7rem);
+        }
+
+        .hero-content {
+            max-width: 68rem;
+        }
+
+        .hero-logo-shell {
+            display: grid;
+            place-items: center;
+            width: clamp(9.75rem, 18vw, 16.5rem);
+            height: clamp(9.75rem, 18vw, 16.5rem);
+            border-radius: 9999px;
+            border: 1px solid rgba(255, 235, 226, 0.62);
+            background:
+                radial-gradient(circle at 50% 36%, rgba(255, 244, 238, 0.5), rgba(255, 210, 191, 0.23) 50%, rgba(128, 27, 27, 0.12) 100%);
+            -webkit-backdrop-filter: blur(20px) saturate(1.32);
+            backdrop-filter: blur(20px) saturate(1.32);
+            box-shadow: 0 0 0 10px rgba(255, 179, 173, 0.1), 0 20px 52px rgba(0, 0, 0, 0.4);
+        }
+
+        .hero-logo {
+            width: 90%;
+            height: 90%;
+            object-fit: contain;
+            filter: saturate(1.28) contrast(1.12) brightness(1.04) drop-shadow(0 10px 18px rgba(0, 0, 0, 0.3));
+        }
+
+        .hero-kicker {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 36px;
+            padding: 0.45rem 0.95rem;
+            border-radius: 9999px;
+            color: #ffe7dd;
+            background: rgba(18, 13, 13, 0.72);
+            border: 1px solid rgba(255, 182, 141, 0.28);
+            font-size: 0.875rem;
+            font-weight: 700;
+        }
+
+        .hero-title {
+            max-width: 13ch;
+            margin-inline: auto;
+            color: var(--ink);
+            font-size: clamp(3rem, 8vw, 6rem);
+            line-height: 0.98;
+            letter-spacing: 0;
+            text-wrap: balance;
+        }
+
+        .hero-title span {
+            color: var(--primary);
+        }
+
+        .hero-copy {
+            max-width: 44rem;
+            color: var(--muted);
+            text-wrap: pretty;
+        }
+
+        .hero-rail {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.625rem;
+            color: #ffe9df;
+        }
+
+        .hero-rail span {
+            border-radius: 9999px;
+            background: rgba(255, 179, 173, 0.12);
+            border: 1px solid rgba(255, 179, 173, 0.16);
+            padding: 0.45rem 0.8rem;
+            font-size: 0.875rem;
+            font-weight: 700;
+        }
+
+        .section-heading {
+            max-width: 46rem;
+            margin-inline: auto;
+            text-align: center;
+        }
+
+        .section-heading h2 {
+            color: var(--primary);
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            line-height: 1.08;
+            letter-spacing: 0;
+            text-wrap: balance;
+        }
+
+        .section-heading p {
+            margin-top: 0.9rem;
+            color: var(--muted);
+            font-size: clamp(1rem, 2vw, 1.125rem);
+            line-height: 1.75;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(12, minmax(0, 1fr));
+            gap: clamp(1rem, 2vw, 1.75rem);
+        }
+
+        .menu-card-meat,
+        .menu-card-pork,
+        .menu-card-seafood,
+        .menu-card-soup {
+            grid-column: span 4;
+        }
+
+        .menu-card-veg {
+            grid-column: span 8;
+        }
+
+        .card-surface {
+            position: relative;
+            overflow: hidden;
+            border-radius: 1rem;
+            border: 1px solid rgba(255, 179, 173, 0.18);
+            background: linear-gradient(180deg, rgba(37, 30, 30, 0.94), rgba(32, 26, 26, 0.98));
+            transition: transform 220ms ease-out, border-color 220ms ease-out, background 220ms ease-out;
+        }
+
+        .card-surface:hover {
+            transform: translateY(-4px);
+            border-color: rgba(255, 182, 141, 0.58);
+            background: linear-gradient(180deg, rgba(47, 40, 40, 0.98), rgba(32, 26, 26, 0.98));
+        }
+
+        .card-surface img {
+            filter: saturate(1.08) contrast(1.04);
+        }
+
+        .dish-list {
+            color: var(--muted);
+        }
+
+        .quick-menu-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: clamp(0.9rem, 2vw, 1.25rem);
+        }
+
+        .quick-menu-grid .card-surface {
+            min-height: 13.5rem;
+        }
+
+        .location-band {
+            background:
+                linear-gradient(180deg, rgba(18, 13, 13, 0.9), rgba(18, 13, 13, 1)),
+                var(--bg-deep);
+            border-top: 1px solid rgba(255, 179, 173, 0.14);
+        }
+
+        .location-wrap {
+            display: grid;
+            grid-template-columns: minmax(0, 0.92fr) minmax(320px, 1.08fr);
+            gap: clamp(2rem, 5vw, 5rem);
+            align-items: center;
+        }
+
+        .location-points {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.65rem;
+            margin: 1.25rem 0 2rem;
+        }
+
+        .location-points span {
+            border-radius: 9999px;
+            padding: 0.5rem 0.8rem;
+            background: rgba(255, 179, 173, 0.1);
+            color: #ffe2da;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .map-panel {
+            position: relative;
+            min-height: clamp(21rem, 36vw, 29rem);
+            overflow: hidden;
+            border-radius: 1rem;
+            border: 1px solid rgba(255, 179, 173, 0.22);
+            background: var(--surface);
+        }
+
+        .map-panel img {
+            opacity: 0.86;
+            transition: opacity 260ms ease-out, transform 600ms ease-out;
+        }
+
+        .map-panel:hover img {
+            opacity: 1;
+            transform: scale(1.03);
+        }
+
+        .footer-link {
+            color: var(--muted);
+            font-weight: 700;
+            transition: color 160ms ease-out;
+        }
+
+        .footer-link:hover,
+        .footer-link:focus-visible {
+            color: var(--orange);
+        }
+
+        @media (max-width: 1024px) {
+            .menu-card-meat,
+            .menu-card-pork,
+            .menu-card-seafood,
+            .menu-card-soup {
+                grid-column: span 6;
+            }
+
+            .menu-card-veg {
+                grid-column: span 12;
+            }
+
+            .menu-card-meat,
+            .menu-card-pork {
+                order: 1;
+            }
+
+            .menu-card-seafood,
+            .menu-card-soup {
+                order: 2;
+            }
+
+            .menu-card-veg {
+                order: 3;
+            }
+
+            .quick-menu-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .location-wrap {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 720px) {
+            .hero-section {
+                min-height: 760px;
+                padding-top: 5.5rem;
+                padding-bottom: 4rem;
+            }
+
+            .hero-title {
+                max-width: 100%;
+                font-size: clamp(2.15rem, 10vw, 2.75rem);
+                line-height: 1.05;
+                letter-spacing: 0;
+            }
+
+            .hero-kicker {
+                max-width: 100%;
+                white-space: normal;
+            }
+
+            .hero-rail {
+                gap: 0.5rem;
+            }
+
+            .hero-rail span {
+                flex: 0 1 calc(50% - 0.35rem);
+                padding-inline: 0.5rem;
+                text-align: center;
+            }
+
+            .section-heading h2 {
+                font-size: clamp(1.95rem, 9vw, 2.45rem);
+            }
+
+            .menu-card-meat,
+            .menu-card-pork,
+            .menu-card-seafood,
+            .menu-card-soup,
+            .menu-card-veg {
+                grid-column: span 12;
+            }
+
+            .quick-menu-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .location-wrap .section-heading {
+                text-align: center;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                width: 100%;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                scroll-behavior: auto !important;
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="site-header flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-sm sticky top-0 z-50">
+<div class="flex items-center gap-sm">
+<img alt="Haekpak Shabu Logo" class="brand-logo h-12 w-12 rounded-full border-2 border-primary-container" src="assets/haekpak-logo-transparent.png"/>
+<span class="font-display-lg text-title-md md:text-headline-lg font-extrabold text-primary leading-none">Haekpak Shabu</span>
+</div>
+<!-- Desktop Nav -->
+<nav class="hidden md:flex items-center gap-lg">
+<a class="text-on-surface-variant font-label-bold hover:text-secondary-fixed transition-colors duration-200" href="#menu">เมนู</a>
+<a class="text-on-surface-variant font-label-bold hover:text-secondary-fixed transition-colors duration-200" href="#location">ที่ตั้งร้าน</a>
+</nav>
+<a class="hidden md:inline-flex btn-primary" href="https://maps.app.goo.gl/xWr94WTnDo4s6LFr8" rel="noopener" target="_blank">
+<span class="material-symbols-outlined mr-xs" style="font-variation-settings: 'FILL' 1;">location_on</span>
+            ไปที่ร้าน
+        </a>
+<a aria-label="เปิด Google Maps" class="md:hidden btn-icon" href="https://maps.app.goo.gl/xWr94WTnDo4s6LFr8" rel="noopener" target="_blank">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</a>
+</header>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="hero-section relative w-full flex justify-center px-margin-mobile md:px-margin-desktop overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/78 to-background/12 z-10"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-background/72 via-background/30 to-background/66 z-10"></div>
+<img alt="หม้อชาบูเดือดพร้อมผักและวัตถุดิบสด" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLujW4xd1DBixmhAO2znsNyVvWUV-LPTwoe5SGtAjg8QMu_k0FqClnbOA6ihLdsTk_iF5NNPekV8Gyai0_ykkDHC161hVlnU7VU6f0X42mnOsPIVqWxL6d_ZT00l9BgPZh9T1GEYqTrF92OzrQsVa4yVOdF_KssVYA7bSJzzvI9bOIvJFTrlgxkomhsiLfiiP8-CoRYYOFxs1Si_pAElqa7tNmiQFBPf91zNnQQ_WhYw-VSYGd76pJSdFQ"/>
+</div>
+<div class="hero-content relative z-20 text-center mx-auto flex flex-col items-center gap-md">
+<span class="hero-kicker">บุฟเฟ่ต์ชาบู · เติมได้จุใจ · เปิดแผนที่</span>
+<div class="hero-logo-shell mb-sm">
+<img alt="Haekpak Shabu Logo Large" class="hero-logo" src="assets/haekpak-logo-transparent.png"/>
+</div>
+<h1 class="hero-title font-display-lg font-black text-glow-orange">
+                    แหกปากชาบู<br/>
+<span>บุฟเฟ่ต์ชาบู<br/>หม้อไฟเดือด</span>
+</h1>
+<p class="hero-copy font-body-lg text-body-md md:text-body-lg">
+<span class="hidden sm:inline">เลือกน้ำซุปที่ใช่ เติมเนื้อ หมู ทะเล ผัก ของทานเล่น และของหวานให้ครบโต๊ะ เหมาะกับมื้อนัดรวมเพื่อนและครอบครัว</span>
+<span class="sm:hidden">เลือกซุปที่ใช่ เติมเมนูที่ชอบ<br/>นั่งล้อมหม้อกับเพื่อน<br/>ครบทั้งคาวและหวาน</span>
+                </p>
+<div class="hero-actions flex flex-col sm:flex-row gap-sm md:gap-md mt-sm w-full sm:w-auto">
+<a class="btn-primary text-body-lg" href="https://maps.app.goo.gl/xWr94WTnDo4s6LFr8" rel="noopener" target="_blank">
+<span class="material-symbols-outlined mr-sm" style="font-variation-settings: 'FILL' 1;">directions</span>
+                        เปิด Google Maps
+                    </a>
+<a class="btn-secondary text-body-lg" href="#menu">
+<span class="material-symbols-outlined mr-sm">restaurant_menu</span>
+                        ดูเมนูแนะนำ
+                    </a>
+</div>
+<div aria-label="เมนูเด่น" class="hero-rail mt-md">
+<span>บุฟเฟ่ต์ชาบู</span>
+<span>ริบอาย</span>
+<span>หมูสามชั้น</span>
+<span>กุ้งขาว</span>
+<span>ซุปหม่าล่า</span>
+</div>
+</div>
+</section>
+<!-- Menu Section -->
+<section class="px-margin-mobile md:px-margin-desktop py-xl bg-surface" id="menu">
+<div class="section-heading mb-xl">
+<h2 class="font-headline-lg font-extrabold">ไลน์บุฟเฟ่ต์<br class="sm:hidden"/>พร้อมตั้งหม้อ</h2>
+<p>
+<span class="hidden sm:inline">เริ่มจากเนื้อ หมู หรือทะเล แล้วค่อยเติมผัก น้ำซุป เส้น น้ำจิ้ม ของทานเล่น และของหวานให้ครบโต๊ะ</span>
+<span class="sm:hidden">เริ่มจากเนื้อ หมู ทะเล<br/>เติมผัก ซุป เส้น และของหวาน</span>
+</p>
+</div>
+<div class="menu-grid">
+<!-- เนื้อ -->
+<div class="card-surface menu-card-meat p-0 flex flex-col group">
+<div class="relative h-48 md:h-64 overflow-hidden">
+<img alt="Beef" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLsnYryV-fxXp7DVzp_DsONHcogZYFSvTBCZY9g75bFuJ4Nu3OKzMJumxg9SOR8Nc4TeAVeI19ivvKdE-1Ihh5eDt7BtMv-2hMgEqNH52bVoP_n2ubdVZtCi3xnz6b1RHJE7Z_wFw0WfwQoduUxQe8F1wX8rtoLSt2QL7_zgtK0HWz1pQmhHVS7VLTrQAUayDzzyv8aFVcP3HaBsXV3-XBScBtb8TIqI9D7PnfBKUP9Lsm3tff7hmUdWPQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low to-transparent opacity-80"></div>
+<div class="absolute bottom-sm left-md flex items-center gap-sm">
+<span class="material-symbols-outlined text-secondary text-headline-lg-mobile">restaurant_menu</span>
+<h3 class="font-title-md text-headline-lg-mobile text-on-surface">เนื้อ</h3>
+</div>
+</div>
+<div class="p-md flex-grow">
+<ul class="dish-list space-y-sm font-body-md flex-grow">
+<li class="flex justify-between items-center"><span class="flex items-center gap-xs"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>ริบอาย</span></li>
+<li class="flex justify-between items-center"><span class="flex items-center gap-xs"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>สไบนาง</span></li>
+</ul>
+</div>
+</div>
+<!-- หมู -->
+<div class="card-surface menu-card-pork p-0 flex flex-col group">
+<div class="relative h-48 md:h-64 overflow-hidden">
+<img alt="Pork" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLvZtH3ZaQCG21Vpw9gPsIthXAaIh7iaSe-w96K45sd68yUl0xZbfnnYSor5xdhzOr5KHMbCMB6uhiDUTjv4wVThRJMypKwu3nRMy21pbaoYBP0MUfuhZ8WMmbqtLXKNADFIKNngg5o6CbQJiAhslPm0Hf6udJJzH4QXlAu9as_xW-4jVrWE2skKlB1eObx1U9NA26av-m9fmbF1LFH2jL11YfXcN_fU4Hz9c1u-uyZOFJVBS9SM1gvWoj0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low to-transparent opacity-80"></div>
+<div class="absolute bottom-sm left-md flex items-center gap-sm">
+<span class="material-symbols-outlined text-secondary text-headline-lg-mobile">skillet</span>
+<h3 class="font-title-md text-headline-lg-mobile text-on-surface">หมู</h3>
+</div>
+</div>
+<div class="p-md flex-grow">
+<ul class="dish-list space-y-sm font-body-md flex-grow grid grid-cols-2 gap-x-sm gap-y-sm">
+<li class="flex items-center gap-xs"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>สันคอ</li>
+<li class="flex items-center gap-xs"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>สามชั้น</li>
+<li class="flex items-center gap-xs"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>สันนอก</li>
+<li class="flex items-center gap-xs"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>หมูหมักนุ่ม</li>
+<li class="flex items-center gap-xs"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>หมูเด้ง</li>
+<li class="flex items-center gap-xs"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>ตับหมู</li>
+</ul>
+</div>
+</div>
+<!-- ทะเล -->
+<div class="card-surface menu-card-seafood p-0 flex flex-col group">
+<div class="relative h-48 md:h-64 overflow-hidden">
+<img alt="Seafood" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLu6jemyVo9_9iKpByaaNi3K5U11X6-WBhUqVw_9hn4f4fwbkgaqpLQ_YaFZErzg_erJaNh7h9leBGGqmDc74wm0dlaMB0ARfPHg4QUfeXsgdLs9qi2v2CJLEpQpNOS3InLW2kqlqxnAoYBRmo2wVelse7zB4b4dThBmjcxTq4X1GVwG_wkmPudvwFK9TN8gdcWKLLXQwrdcBcB3MjpwdI75COl0RKTqrwLVutbO0fhMHxcGnYLLXoO2OMY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low to-transparent opacity-80"></div>
+<div class="absolute bottom-sm left-md flex items-center gap-sm">
+<span class="material-symbols-outlined text-secondary text-headline-lg-mobile">set_meal</span>
+<h3 class="font-title-md text-headline-lg-mobile text-on-surface">ทะเล</h3>
+</div>
+</div>
+<div class="p-md flex-grow">
+<ul class="dish-list space-y-sm font-body-md flex-grow grid grid-cols-2 gap-x-sm gap-y-sm">
+<li class="flex items-center gap-xs"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>กุ้งขาว</li>
+<li class="flex items-center gap-xs"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>หมึกสด</li>
+<li class="flex items-center gap-xs"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>หมึกกรอบ</li>
+<li class="flex items-center gap-xs"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>หอยแมลงภู่</li>
+<li class="flex items-center gap-xs"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>ปลาดอลลี่</li>
+<li class="flex items-center gap-xs"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>แมงกระพรุน</li>
+</ul>
+</div>
+</div>
+<!-- ผัก -->
+<div class="card-surface menu-card-veg p-0 flex flex-col group">
+<div class="relative h-48 md:h-64 overflow-hidden">
+<img alt="Vegetables" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLvwwlSQ55hzWXabckLZEYAzaPzuXTfcEJJdBwNuuddM2rjF1TM8JJL8GQ69xajtBlaPScX1GRa5qtjkplO4NLpOMyInJ3GfsSdYbH7VBpImq59E-6aEuNtOLvnOcld5-RvVxKt-kMawXH5HAfnABgTLe7u0qP-YeD5t1TyuHl3NcTnL3WJtByZ6UTvtGEy_LMSPD1PNKvMxWpC35RtOBLGTAtGMPucNfmZdj2ugiXty33LewNGm-n-do8o"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low to-transparent opacity-80"></div>
+<div class="absolute bottom-sm left-md flex items-center gap-sm">
+<span class="material-symbols-outlined text-tertiary text-headline-lg-mobile">local_florist</span>
+<h3 class="font-title-md text-headline-lg-mobile text-on-surface">ผัก</h3>
+</div>
+</div>
+<div class="p-md flex-grow">
+<ul class="dish-list font-body-md flex-grow flex flex-wrap gap-md">
+<li class="flex items-center gap-xs"><span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span>ผักกาดขาว</li>
+<li class="flex items-center gap-xs"><span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span>ผักบุ้ง</li>
+<li class="flex items-center gap-xs"><span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span>กะหล่ำปลี</li>
+<li class="flex items-center gap-xs"><span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span>ฮ่องเต้</li>
+<li class="flex items-center gap-xs"><span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span>ขึ้นฉ่าย</li>
+<li class="flex items-center gap-xs"><span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span>เห็ดเข็มทอง</li>
+<li class="flex items-center gap-xs"><span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span>เห็ดนางรมหลวง</li>
+<li class="flex items-center gap-xs"><span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span>แครอท</li>
+<li class="flex items-center gap-xs"><span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span>ข้าวโพดอ่อน</li>
+<li class="flex items-center gap-xs"><span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span>สาหร่ายวากาเมะ</li>
+</ul>
+</div>
+</div>
+<!-- น้ำซุป -->
+<div class="card-surface menu-card-soup p-0 flex flex-col group bg-surface-container-high">
+<div class="relative h-48 md:h-64 overflow-hidden">
+<img alt="Soups" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLsOlSPFS-_gCZDefMCjXCwr4m9YIxBD5z3FdOgpL0eg63yOaCqbTEpEGtB8FJVs9K9fZ0C5KtgxVnrGTcDPdm_bgJQKvPHpcDWN_R98cbgRFL98qsjicY6p-kwQoUs8iFNFg-hU8hVXmG6LBEtgPvg3-74-HnGfdwtI_LbeYJkUwvO1tazN8pQvMHBXqoF-JRrcpfqo0z5-cGO_ndaVRwdl49ZfdUo2HZxcQgQKgQDZPgWpMo4N8ZJoXdk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-high to-transparent opacity-80"></div>
+<div class="absolute bottom-sm left-md flex items-center gap-sm">
+<span class="material-symbols-outlined text-secondary text-headline-lg-mobile">local_cafe</span>
+<h3 class="font-title-md text-headline-lg-mobile text-on-surface">น้ำซุป</h3>
+</div>
+</div>
+<div class="p-md flex-grow">
+<ul class="dish-list space-y-sm font-body-md flex-grow">
+<li class="flex items-center gap-xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>น้ำใส</li>
+<li class="flex items-center gap-xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>น้ำดำ</li>
+<li class="flex items-center gap-xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>น้ำหม่าล่า</li>
+<li class="flex items-center gap-xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>น้ำซุปทงคัตสึ</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Other Menu Items Bento -->
+<div class="quick-menu-grid mt-lg">
+<!-- เมนูกลมๆ -->
+<div class="card-surface p-0 flex flex-col group min-h-[200px]">
+<div class="relative h-32 overflow-hidden">
+<img alt="Toppings" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLu7MFysSoRdE_TnI4DE48O57-Teo_Lhxf7Mv0ljj3MUPefgUZFd1Dq25T4q4y79de1C7hpwtp29BoeUlUDbDdFwy1uMkNNi8cYM1-KRZMSNzow0XuvD-shrCebwd0TZH8GRbOEaTGRfdAxlsxlIT4KthdEUtjJRHS6IBt632YSL1kSG47WsxY-3hN-vPRY6aQdaN8u05aF8dtg4KhGjwHSUL3ay8M9HAOpqpi0jShAFzebk2MwJaKTzmGI"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low to-transparent opacity-80"></div>
+<div class="absolute bottom-sm left-sm flex items-center gap-xs">
+<span class="material-symbols-outlined text-outline text-title-md">egg_alt</span>
+<h4 class="font-label-bold text-label-bold text-on-surface">เมนูกลมๆ</h4>
+</div>
+</div>
+<div class="p-sm flex-grow">
+<p class="font-body-md text-sm text-on-surface-variant leading-tight">เต้าหู้ไข่, เต้าหู้ชีส, เต้าหู้ปลา, ไข่ไก่, ไส้กรอกหนังกรอบ, ปูอัด</p>
+</div>
+</div>
+<!-- เด็กเส้น -->
+<div class="card-surface p-0 flex flex-col group min-h-[200px]">
+<div class="relative h-32 overflow-hidden">
+<img alt="Noodles" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLtzNvpM4nPzHiFHGrdbmJCNZMROUbe4-T6LoAiIIhY9gBNiLCWNA_yU0s2iXhJo9LJwNkICm1OpCrf1b1GgqiLLTXYSa0MU2QxHqL1_x6vprkUx9bin2VUYTnqItXSoSUuGkQ-cl5DaTdWlCMmfXTo3m2PjJH8mQy1NZRTr-RSiD18ngRUc_xEE7rpC9lIOs0tnEeqoMHb7PKHIPhL8sfc2i-0FjuZiY_fRSQ8rwhjeEe6FfH-ZHRRVpQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low to-transparent opacity-80"></div>
+<div class="absolute bottom-sm left-sm flex items-center gap-xs">
+<span class="material-symbols-outlined text-outline text-title-md">ramen_dining</span>
+<h4 class="font-label-bold text-label-bold text-on-surface">เด็กเส้น</h4>
+</div>
+</div>
+<div class="p-sm flex-grow">
+<p class="font-body-md text-sm text-on-surface-variant leading-tight">วุ้นเส้น, เส้นเกาหลี, เส้นแก้ว, หมี่หยก</p>
+</div>
+</div>
+<!-- น้ำจิ้ม -->
+<div class="card-surface p-0 flex flex-col group min-h-[200px]">
+<div class="relative h-32 overflow-hidden">
+<img alt="Dipping Sauces" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLsxZYD-wA9LhxpFktS7UGMkQHu519esSFhg8VoGMREuM8hO3b45jWF73UG6khvb-po44JE4u9m3sLxO3ffP2ABWO1BpyQbb8UH8QaCszAlpjZtadWziSoXdDXfqBoaq0nwD8rbtQH2uxM0MZdEYe_ZCRFxNXgp5ADeUBEjBqzsTqCnCddp7sl7R0ctM3MErC9YqNuAZnnM6AMR9YTWNP4mZtp4oR9GqpIqzdS7vMondiTipCqx3CKX4ZB0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low to-transparent opacity-80"></div>
+<div class="absolute bottom-sm left-sm flex items-center gap-xs">
+<span class="material-symbols-outlined text-outline text-title-md">soup_kitchen</span>
+<h4 class="font-label-bold text-label-bold text-on-surface">น้ำจิ้ม</h4>
+</div>
+</div>
+<div class="p-sm flex-grow">
+<p class="font-body-md text-sm text-on-surface-variant leading-tight">สุกี้แหกปาก, ซีฟู้ด, งาขาว</p>
+</div>
+</div>
+<!-- ของทานเล่น -->
+<div class="card-surface p-0 flex flex-col group min-h-[200px]">
+<div class="relative h-32 overflow-hidden">
+<img alt="Snacks" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLv0vMuHnR3CQBSSdABUCCj5wIgnaiuoSB8HFAFU-BwKctGMxkWzq2KAIRiFqDAfRG5FMXkUCczIu9a9scfAEre8CC2kvzM0ZKvJ8PndFNItSUEa9bWLNgYYJf18OncqyjdVvyS54ibeClt8ijstSphoerV0rqVY3IxqBGo0Xfy6IPtIC6o-cyY1XIV8COoxIBhFhnvxSXrmr_VV1Rom6lEDM6rSrchkC5fEBeS_C_Ykb9nANsutHrM_fbA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low to-transparent opacity-80"></div>
+<div class="absolute bottom-sm left-sm flex items-center gap-xs">
+<span class="material-symbols-outlined text-outline text-title-md">local_pizza</span>
+<h4 class="font-label-bold text-label-bold text-on-surface">ของทานเล่น</h4>
+</div>
+</div>
+<div class="p-sm flex-grow">
+<p class="font-body-md text-sm text-on-surface-variant leading-tight">เฟรนช์ฟรายส์, นักเก็ต, ไก่ป๊อป</p>
+</div>
+</div>
+<!-- ซูชิ -->
+<div class="card-surface p-0 flex flex-col group min-h-[200px]">
+<div class="relative h-32 overflow-hidden">
+<img alt="Sushi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLsBKtO9hAUTe1LP1Dj-2ECe5JhgcOLElCjj_OCBavP2ESh2cF5va7gFkUONzj6pAZ-dIpVlhSoWsvgNMMrZJwX77se3R4992g8HqKTcHfNpXPThBxgz-byRCCLvQs31KHlmj7uvzeNU8Zg4_ieCcBosiRpZusDIT77udmt71TU6VZMwkhjMWieNnfKNmTUUKgb2iytu_q1NG2Kc65adu_kFq6bB9eEWh1ICW78n3fcQ9fXBobZA_IaqK_0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low to-transparent opacity-80"></div>
+<div class="absolute bottom-sm left-sm flex items-center gap-xs">
+<span class="material-symbols-outlined text-outline text-title-md">bento</span>
+<h4 class="font-label-bold text-label-bold text-on-surface">ซูชิ</h4>
+</div>
+</div>
+<div class="p-sm flex-grow">
+<p class="font-body-md text-sm text-on-surface-variant leading-tight">ไข่กุ้ง, ยำสาหร่าย, ไข่หวาน, ปูอัด</p>
+</div>
+</div>
+<!-- เมนูพิเศษ -->
+<div class="card-surface p-0 flex flex-col group min-h-[200px] border-primary-container">
+<div class="relative h-32 overflow-hidden">
+<img alt="Special Menus" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLvX38mhmUzKDYebsCaUhb_GWVN8iTNka3Uc73DcglE0QB9ftKnGEDVsZvncBO6R3-apNBpgXKugT8g7wrn2vqVOuGXx7VUaI_JcJfm1T4S3b2PGou2oKXbEzG2AXGZlrD8RH8im-7tl9C5BndQt3zXW754na6MY0JHQjUriILNYXag4sfwSuq3QZd2RjgL50jLeiDi2IU5LuFkWecGEbEcObMXVQCpAH-gIlSb8BVUTaeWEymVG5aN-RK4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low to-transparent opacity-80"></div>
+<div class="absolute bottom-sm left-sm flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary text-title-md">star</span>
+<h4 class="font-label-bold text-label-bold text-primary">เมนูพิเศษ</h4>
+</div>
+</div>
+<div class="p-sm flex-grow">
+<p class="font-body-md text-sm text-on-surface-variant leading-tight">กุ้งดองซีอิ้ว, แมงกระพรุนน้ำมันงา</p>
+</div>
+</div>
+<!-- ของหวาน -->
+<div class="card-surface p-0 flex flex-col group min-h-[200px]">
+<div class="relative h-32 overflow-hidden">
+<img alt="Desserts" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLuxEoT6gC5si7E_9rQp8DqeH9UL9pT3jPh8B_iM-kTw01s_7rqnKDSv25vARXI-_5LHWOjJ3kXTI0t-aYezA0CWFToT5pVxARNCrIH9h1dQuHKuKU7A0eC-JvmefG2FzXn18FeVbPJcEr_64RC6yxjfLEOww4DWGHAt-OyMYqX45RVmFj1lm7gje-pxS_oQlT9lxvGXyj9PTw0Gs4SqDDMb7ui05sTueayEzrcx8n61MBObtia-ZF9gAg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low to-transparent opacity-80"></div>
+<div class="absolute bottom-sm left-sm flex items-center gap-xs">
+<span class="material-symbols-outlined text-outline text-title-md">icecream</span>
+<h4 class="font-label-bold text-label-bold text-on-surface">ของหวาน</h4>
+</div>
+</div>
+<div class="p-sm flex-grow">
+<p class="font-body-md text-sm text-on-surface-variant leading-tight">ไอศกรีม, น้ำแข็งใส</p>
+</div>
+</div>
+<!-- เครื่องดื่ม -->
+<div class="card-surface p-0 flex flex-col group min-h-[200px]">
+<div class="relative h-32 overflow-hidden">
+<img alt="Drinks" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFDh4cIvXXDkLLi_4CNCesIRqOkwIa1NS-5ZL6qrlToxBHwXAMStBnoaXwGz5pJN8rMKk5T5RRNLOHT5RuGRHKw7ZdwzrHRND9ZQNJ94QJPZU8PIumTdtAiBh0cQgquI1p85KZKSv7b1aBBiM1TQ8c3Zt7Bpx1RuNS_kLVhT_0jNBwwrEDXzgneCjHsaAqdqS4Jhfi6cku4x1B6vEovCTZeKyETnanDPa3pq_Y4R76CLVHDIZIpdbiMKFhi9r3GXjSkkJWSphgmGM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low to-transparent opacity-80"></div>
+<div class="absolute bottom-sm left-sm flex items-center gap-xs">
+<span class="material-symbols-outlined text-outline text-title-md">local_drink</span>
+<h4 class="font-label-bold text-label-bold text-on-surface">เครื่องดื่ม</h4>
+</div>
+</div>
+<div class="p-sm flex-grow">
+<p class="font-body-md text-sm text-on-surface-variant leading-tight">เอส, เอส(ไม่มีน้ำตาล), เอสส้ม, เอสเขียว, เอสแดง, สไปรท์, น้ำเปล่า, น้ำผลไม้</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Location Section -->
+<section class="location-band px-margin-mobile md:px-margin-desktop py-xl" id="location">
+<div class="location-wrap max-w-6xl mx-auto">
+<div class="text-center md:text-left">
+<div class="section-heading md:mx-0 md:text-left">
+<h2 class="font-headline-lg font-extrabold">อยากกินแล้ว กดแผนที่มาได้เลย</h2>
+<p>
+                        ร้านบุฟเฟ่ต์ชาบูพร้อมเป็นหม้อนัดรวมตัวของคนชอบกิน เลือกเมนูไว้ในใจ แล้วเปิด Google Maps เพื่อเดินทางมาที่ร้าน
+                    </p>
+</div>
+<div class="location-points">
+<span>เหมาะกับนัดกินเป็นกลุ่ม</span>
+<span>เมนูครบตั้งแต่คาวถึงหวาน</span>
+<span>เปิดเส้นทางใน Google Maps</span>
+</div>
+<a class="btn-primary text-body-lg w-full md:w-auto" href="https://maps.app.goo.gl/xWr94WTnDo4s6LFr8" rel="noopener" target="_blank">
+<span class="material-symbols-outlined mr-sm" style="font-variation-settings: 'FILL' 1;">map</span>
+                        เปิดใน Google Maps
+                    </a>
+</div>
+<div class="map-panel w-full group">
+<div class="absolute inset-0 bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-display-lg text-outline">location_city</span>
+</div>
+<img alt="แผนที่โทนเข้มพร้อมหมุดร้านแหกปากชาบู" class="absolute inset-0 w-full h-full object-cover" data-alt="A stylized, modern dark-mode map illustration centered on a restaurant location pin. The map features deep black and charcoal tones for landmasses and roads, with subtle glowing maroon and bright orange accents highlighting the routes leading to a prominent, glowing orange location marker. The overall aesthetic is sleek, highly contrasting, and aligns with a premium night-time dining app interface." data-location="Bangkok" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5AjZjvaHCCvJ6TqzXQkV0GvNRk7FSPOHlhTH72cdi3KVG0DH8dvwtFYL2HmD9JS13iBNS_6Cc8vLyK_el4tWC4RD2vqcpsETq29SvwT6zN3_3L__O0E3bd5G1CCpfQqMVMf8KF_x_lXuimw0UdzqJ-kW0sOF0br3i8bTflejv5nzA9zoQjNtsmPj0foPU_6S3NbwhT000a_rrOQupvBLHm5wX1m0szj5Ib8R2SqZHY0q13o7oLXCSGNIgG8tK_wUpiuV2nGhnwpk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant flex flex-col md:flex-row justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-lg gap-md text-center md:text-left">
+<div class="flex items-center gap-sm">
+<img alt="" class="brand-logo h-10 w-10 rounded-full border border-primary-container" src="assets/haekpak-logo-transparent.png"/>
+<span class="font-title-md text-title-md font-bold text-on-surface">Haekpak Shabu</span>
+</div>
+<p class="text-on-surface-variant font-body-md text-body-md">© 2026 Haekpak Shabu. ชวนเพื่อนมา ตั้งหม้อ แล้วกินให้อร่อย</p>
+<div class="flex gap-md">
+<a class="footer-link text-label-bold" href="#menu">เมนู</a>
+<a class="footer-link text-label-bold" href="https://maps.app.goo.gl/xWr94WTnDo4s6LFr8" rel="noopener" target="_blank">Google Maps</a>
+</div>
+</footer>
+</body></html>
